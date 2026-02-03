@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VideoForge — Free Video Downloader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand__mark">VF</span>
+          <div>
+            <strong>VideoForge</strong>
+            <span>Free video downloader</span>
+          </div>
+        </div>
+        <div class="nav__actions">
+          <button class="ghost">Docs</button>
+          <button class="primary">Launch app</button>
+        </div>
+      </nav>
+
+      <div class="hero__content">
+        <div>
+          <p class="eyebrow">Powered by FFmpeg + open-source compilers</p>
+          <h1>Download and remaster video clips from any site.</h1>
+          <p class="subhead">
+            Drop a URL, choose a quality, trim a time range, and export as MP4, MP3, or WebM
+            — all with free tooling. No paid services required.
+          </p>
+          <div class="hero__cta">
+            <button class="primary">Start downloading</button>
+            <button class="ghost">See how it works</button>
+          </div>
+        </div>
+        <div class="hero__card">
+          <div class="card__header">
+            <h2>New download</h2>
+            <span class="badge">100% free</span>
+          </div>
+          <label class="field">
+            <span>Video URL</span>
+            <input type="url" placeholder="https://example.com/video" />
+          </label>
+          <div class="grid">
+            <label class="field">
+              <span>Quality</span>
+              <select>
+                <option>Best available</option>
+                <option>1080p</option>
+                <option>720p</option>
+                <option>480p</option>
+                <option>Audio only</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Format</span>
+              <select>
+                <option>MP4</option>
+                <option>WEBM</option>
+                <option>MP3</option>
+                <option>WAV</option>
+              </select>
+            </label>
+          </div>
+          <div class="grid">
+            <label class="field">
+              <span>Start time</span>
+              <input type="text" placeholder="00:00:00" />
+            </label>
+            <label class="field">
+              <span>End time</span>
+              <input type="text" placeholder="00:02:30" />
+            </label>
+          </div>
+          <button class="primary full">Download clip</button>
+          <p class="hint">
+            FFmpeg runs in the browser via WebAssembly. Bulk downloads are queued below.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="panel__header">
+          <h2>Bulk download queue</h2>
+          <button class="ghost">Import list</button>
+        </div>
+        <div class="queue">
+          <div class="queue__row">
+            <input type="checkbox" checked />
+            <div>
+              <strong>Tech Conference Keynote</strong>
+              <p>Trim 00:01:10 → 00:12:32 · 1080p · MP4</p>
+            </div>
+            <span class="status success">Ready</span>
+            <button class="ghost">Download</button>
+          </div>
+          <div class="queue__row">
+            <input type="checkbox" checked />
+            <div>
+              <strong>Podcast Episode 42</strong>
+              <p>Audio only · MP3 · 00:00:00 → 00:48:20</p>
+            </div>
+            <span class="status warning">Processing</span>
+            <button class="ghost">Preview</button>
+          </div>
+          <div class="queue__row">
+            <input type="checkbox" />
+            <div>
+              <strong>Product Demo</strong>
+              <p>720p · WebM · Full length</p>
+            </div>
+            <span class="status">Queued</span>
+            <button class="ghost">Edit</button>
+          </div>
+        </div>
+        <div class="panel__footer">
+          <button class="ghost">Clear queue</button>
+          <button class="primary">Download selected</button>
+        </div>
+      </section>
+
+      <section class="panel features">
+        <div>
+          <h3>Why VideoForge?</h3>
+          <p>
+            Build your own Dirpy-style workflow with free tooling: FFmpeg for conversions, a
+            compiler pipeline for WebAssembly, and a clean UI that scales from single clips to
+            bulk exports.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <h4>Any site, any format</h4>
+            <p>Supports video URLs from any source with customizable output presets.</p>
+          </div>
+          <div class="feature">
+            <h4>Quality & time controls</h4>
+            <p>Choose resolution and trim exact ranges with simple time inputs.</p>
+          </div>
+          <div class="feature">
+            <h4>Bulk workflows</h4>
+            <p>Queue multiple downloads, apply batch settings, and export together.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built with FFmpeg, WebAssembly, and open-source tooling — free forever.</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
